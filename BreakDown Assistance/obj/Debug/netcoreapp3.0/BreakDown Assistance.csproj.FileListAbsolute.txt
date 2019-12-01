@@ -1,0 +1,35 @@
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.exe
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.deps.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.runtimeconfig.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.runtimeconfig.dev.json
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.dll
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.pdb
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.Views.dll
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\bin\Debug\netcoreapp3.0\BreakDown Assistance.Views.pdb
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.csprojAssemblyReference.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\staticwebassets\BreakDown Assistance.StaticWebAssets.Manifest.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\staticwebassets\BreakDown Assistance.StaticWebAssets.xml
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.RazorAssemblyInfo.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.RazorAssemblyInfo.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.AssemblyInfoInputs.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.AssemblyInfo.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.TagHelpers.input.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.TagHelpers.output.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.RazorCoreGenerate.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.RazorTargetAssemblyInfo.cache
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.RazorTargetAssemblyInfo.cs
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.Views.pdb
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.dll
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.pdb
+C:\Users\Arife\source\repos\BreakDown Assistance\BreakDown Assistance\obj\Debug\netcoreapp3.0\BreakDown Assistance.csproj.CopyComplete
