@@ -17,7 +17,7 @@ namespace BreakDown_Assistance.Controllers
         }
         public ViewResult Index()
         {
-            var model = _mechanicRepository.GetAllMechanics();
+            var model = _mechanicRepository.GetMechanics(1);
             return View(model);
         }
         //public IActionResult Index()

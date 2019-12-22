@@ -32,7 +32,10 @@ namespace BreakDown_Assistance
                 services.AddMvc().AddXmlDataContractSerializerFormatters();
                 services.AddTransient<IMechanicsRepository, SQLMechanicsRepository>();
             });
+           
             services.AddControllersWithViews();
+            //services.AddMvc();
+            //services.AddScoped<IMechanicsRepository, MockMechanicsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
