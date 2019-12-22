@@ -11,17 +11,32 @@ namespace BreakDown_Assistance.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public readonly IMechanicsRepository _mechanicRepository;
+        public HomeController(IMechanicsRepository mechanicRepository)
         {
-            _logger = logger;
+            this._mechanicRepository = mechanicRepository;
+        }
+        public ViewResult Index()
+        {
+            var model = _mechanicRepository.GetAllMechanics();
+            return View(model);
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+
+
+        //private readonly ILogger<HomeController> _logger;
+
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+
 
         public IActionResult Privacy()
         {
