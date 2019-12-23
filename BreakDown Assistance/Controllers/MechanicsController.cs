@@ -10,15 +10,15 @@ namespace BreakDown_Assistance.Controllers
     public class MechanicsController : Controller
     {
 
-        public readonly IMechanicsRepository _mechanicRepository;
-        public MechanicsController(IMechanicsRepository mechanicRepository)
-        {
-            this._mechanicRepository = mechanicRepository;
-        }
+        //public IMechanicsRepository _mechanicRepository;
+        //public MechanicsController(IMechanicsRepository mechanicRepository)
+        //{
+        //    this._mechanicRepository = mechanicRepository;
+        //}
         public ViewResult Index()
         {
-            var model = _mechanicRepository.GetMechanics(1);
-            return View(model);
+            //var model = _mechanicRepository.GetAllMechanics();
+            return View();
         }
         //public IActionResult Index()
         //{
