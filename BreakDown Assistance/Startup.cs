@@ -15,18 +15,19 @@ namespace BreakDown_Assistance
 {
     public class Startup
     {
-        private IConfiguration _config;
+      
         public Startup(IConfiguration configuration)
         {
-            _config = configuration;
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to add services to the container
+        
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MechanicsDbConnection")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
             //services.AddMvc().AddXmlDataContractSerializerFormatters();
             //services.AddTransient<IMechanicsRepository, SQLMechanicsRepository>();
             services.AddControllersWithViews();

@@ -8,11 +8,11 @@ namespace BreakDown_Assistance.Models
 {
     public class AppDbContext:DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext>options):base(options)
+        public AppDbContext(DbContextOptions options):base(options)
         {
 
         }
-        public DbSet <Mechanics>Mechanics { get; set; }
+        public virtual DbSet <Mechanics>Mechanics { get; set; }
 
     }
 }
