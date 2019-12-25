@@ -9,22 +9,23 @@ using BreakDown_Assistance.Models;
 
 namespace BreakDown_Assistance.Controllers
 {
-    public class Mechanics1Controller : Controller
+    public class RequestsController : Controller
     {
         private readonly AppDbContext _context;
 
-        public Mechanics1Controller(AppDbContext context)
+        public RequestsController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Mechanics1
+        // GET: Requests
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Mechanics.ToListAsync());
+            var appDbContext = _context.Requests.Include(r => r.mehanics);
+            return View(await appDbContext.ToListAsync());
         }
 
-        // GET: Mechanics1/Details/5
+        // GET: Requests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +33,42 @@ namespace BreakDown_Assistance.Controllers
                 return NotFound();
             }
 
-            var mechanics = await _context.Mechanics
+            var request = await _context.Requests
+                .Include(r => r.mehanics)
                 .FirstOrDefaultAsync(m => m.id == id);
-            if (mechanics == null)
+            if (request == null)
             {
                 return NotFound();
             }
 
-            return View(mechanics);
+            return View(request);
         }
 
-        // GET: Mechanics1/Create
+        // GET: Requests/Create
         public IActionResult Create()
         {
+            ViewData["mechanic_ID"] = new SelectList(_context.Mechanics, "id", "availability");
             return View();
         }
 
-        // POST: Mechanics1/Create
+        // POST: Requests/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,name,contact_Number,availability,location")] Mechanics mechanics)
+        public async Task<IActionResult> Create([Bind("id,mechanic_ID,vehcileType,longitude,latitude")] Request request)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mechanics);
+                _context.Add(request);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(mechanics);
+            ViewData["mechanic_ID"] = new SelectList(_context.Mechanics, "id", "availability", request.mechanic_ID);
+            return View(request);
         }
 
-        // GET: Mechanics1/Edit/5
+        // GET: Requests/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +76,23 @@ namespace BreakDown_Assistance.Controllers
                 return NotFound();
             }
 
-            var mechanics = await _context.Mechanics.FindAsync(id);
-            if (mechanics == null)
+            var request = await _context.Requests.FindAsync(id);
+            if (request == null)
             {
                 return NotFound();
             }
-            return View(mechanics);
+            ViewData["mechanic_ID"] = new SelectList(_context.Mechanics, "id", "availability", request.mechanic_ID);
+            return View(request);
         }
 
-        // POST: Mechanics1/Edit/5
+        // POST: Requests/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,name,contact_Number,availability,location")] Mechanics mechanics)
+        public async Task<IActionResult> Edit(int id, [Bind("id,mechanic_ID,vehcileType,longitude,latitude")] Request request)
         {
-            if (id != mechanics.id)
+            if (id != request.id)
             {
                 return NotFound();
             }
@@ -96,12 +101,12 @@ namespace BreakDown_Assistance.Controllers
             {
                 try
                 {
-                    _context.Update(mechanics);
+                    _context.Update(request);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MechanicsExists(mechanics.id))
+                    if (!RequestExists(request.id))
                     {
                         return NotFound();
                     }
@@ -112,10 +117,11 @@ namespace BreakDown_Assistance.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(mechanics);
+            ViewData["mechanic_ID"] = new SelectList(_context.Mechanics, "id", "availability", request.mechanic_ID);
+            return View(request);
         }
 
-        // GET: Mechanics1/Delete/5
+        // GET: Requests/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +129,31 @@ namespace BreakDown_Assistance.Controllers
                 return NotFound();
             }
 
-            var mechanics = await _context.Mechanics
+            var request = await _context.Requests
+                .Include(r => r.mehanics)
                 .FirstOrDefaultAsync(m => m.id == id);
-            if (mechanics == null)
+            if (request == null)
             {
                 return NotFound();
             }
 
-            return View(mechanics);
+            return View(request);
         }
 
-        // POST: Mechanics1/Delete/5
+        // POST: Requests/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var mechanics = await _context.Mechanics.FindAsync(id);
-            _context.Mechanics.Remove(mechanics);
+            var request = await _context.Requests.FindAsync(id);
+            _context.Requests.Remove(request);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MechanicsExists(int id)
+        private bool RequestExists(int id)
         {
-            return _context.Mechanics.Any(e => e.id == id);
+            return _context.Requests.Any(e => e.id == id);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BreakDown_Assistance.Models.Mechanics>
+﻿@model IEnumerable<BreakDown_Assistance.Models.Request>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                @Html.DisplayNameFor(model => model.vehcileType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.contact_Number)
+                @Html.DisplayNameFor(model => model.longitude)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.availability)
+                @Html.DisplayNameFor(model => model.latitude)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.location)
+                @Html.DisplayNameFor(model => model.mehanics)
             </th>
             <th></th>
         </tr>
@@ -32,16 +32,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.name)
+                @Html.DisplayFor(modelItem => item.vehcileType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.contact_Number)
+                @Html.DisplayFor(modelItem => item.longitude)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.availability)
+                @Html.DisplayFor(modelItem => item.latitude)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.location)
+                @Html.DisplayFor(modelItem => item.mehanics.availability)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |

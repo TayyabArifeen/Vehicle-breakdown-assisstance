@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BreakDown_Assistance.Models
 {
-    [Table("Mechanics")]
-    public class Mechanics
+    [Table("Request")]
+    public class Request
     {
         [Key]
         [Required]
@@ -16,20 +16,18 @@ namespace BreakDown_Assistance.Models
         public int id { get; set; }
 
         [Required]
-        [Column(nameof(name), TypeName = "nvarchar(50)")]
-        public string name { get; set; }
+        [Column(nameof(mechanic_ID), TypeName = "int")]
+        public int mechanic_ID { get; set; }
+
         [Required]
-        [Column(nameof(contact_Number), TypeName = "int")]
-        public int contact_Number { get; set; }
-        [Required]
-        [Column(nameof(availability), TypeName = "nvarchar(50)")]
-        public string availability { get; set; }
+        [Column(nameof(vehcileType), TypeName = "nvarchar(50)")]
+        public string vehcileType { get; set; }
         [Required]
         [Column(nameof(longitude), TypeName = "float")]
         public float longitude { get; set; }
         [Required]
         [Column(nameof(latitude), TypeName = "float")]
         public float latitude { get; set; }
-        public List<Request> requests { get; set; }
+        public Mechanics mehanics { get; set; }
     }
 }
