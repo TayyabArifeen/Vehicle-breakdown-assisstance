@@ -22,8 +22,13 @@ function showPosition(position)
 {
      x.innerHTML = "Latitude: " + position.coords.latitude +
         "<br>Longitude: " + position.coords.longitude;
-    
-    
+    $.ajax({
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        url: "InsertDataintoDatabase.aspx/InsertData",
+        data: "{'username':'" + name + "','subj':'" + subject + "','desc':'" + body + "'}",
+        dataType: "json"
+    });
 }
 
 
