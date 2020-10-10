@@ -1,0 +1,101 @@
+﻿@model BreakDown_Assistance.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<head>
+
+    <style>
+        .header2 {
+            overflow: hidden;
+            background-color: whitesmoke;
+            padding-top: 21px;
+            padding: 5px 0px;
+            padding-right: 16px;
+            width: 1600px;
+            border-bottom: groove;
+            border-bottom-color: beige;
+            margin-left: 300px;
+        }
+
+            .header2 a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 12px 7px;
+                text-decoration: none;
+                font-size: 20px;
+                line-height: 25px;
+                border-radius: 1px;
+            }
+
+                .header2 a.logo {
+                    font-size: 20px;
+                    font-weight: normal;
+                }
+
+                .header2 a:hover {
+                    background-color: dodgerblue;
+                    color: white;
+                }
+
+                .header2 a.active {
+                    background-color: dodgerblue;
+                    color: white;
+                }
+
+        .header2-right {
+            margin-left: 0px;
+        }
+
+        .main {
+            /* Same as the width of the sidenav */
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<div class="header2">
+    <a href="/Login/Profile" class="logo">
+        <i class="fa fa-home">
+            Home
+        </i>
+    </a>
+</div>
+<center><h1>New Product</h1></center>
+<hr />
+<div class="header2">
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CategoryID" class="control-label"></label>
+                    <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProductTitle" class="control-label"></label>
+                    <input asp-for="ProductTitle" class="form-control" />
+                    <span asp-validation-for="ProductTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>
+
